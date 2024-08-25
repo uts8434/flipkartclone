@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shoping Sites for Mobiles, Electronics, Furniture, Grocery .....</title>
+    <link rel="shortcut icon" href="./Image/plus.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="header  ">
+            <div class="icon">
+                <a href="index.html"><img src="./Image/flipkart.png" alt="flipkart"></a>
+                
+                <div class="lowericon">
+                    <span>Explore</span>
+                    <span>Plus</span>
+                    <img src="./Image/plus.png" alt="">
+
+                </div>
+            </div>
+            <div class="search">
+                <div class="innerserarch">
+                    <input type="search" placeholder="Search for products,Brand and more">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="login" onclick="displaylogingpage()">
+                <a href="#">Login</a>
+                <div class="logindropbox">
+                    
+                    <div class="row">
+                        <b>New Customer</b>
+                        <a href="#"><b>SignUp</b></a>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="#">My Profile</a>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-plus"></i>
+                        <a href="#">Flipkart Plus Zone</a>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-file-import"></i>
+                        <a href="#">Orders</a>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-heart"></i>
+                        <a href="#">Wishlists</a>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-ticket"></i>
+                        <a href="#">Rewards</a>
+                    </div>
+                    <div class="row" id="lstrow">
+                        <i class="fa-solid fa-gift"></i>
+                        <a href="#">Gift Cards</a>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+            <div class="seller">
+
+                <a href="#seller"> Become a Seller</a>
+            </div>
+            <div class="more">
+                <a href="#">More</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-up"></i>
+                <div class="morebox">
+                    
+                    <div class="row">
+                        <i class="fa-solid fa-bell"></i>
+                        <a href="#">Notification Preference</a>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-question"></i>
+                        <a href="#">24x7 Customer Support</a>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <a href="#">Advertise</a>
+                    </div>
+                    <div class="row" id="lstrow">
+                        <i class="fa-solid fa-download"></i>
+                        <a href="#">Download App</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i><span>cart</span>
+            </div>
+        </nav>
+    </header>
+    <div class="loginbox">
+
+        <div class="left">
+            <div class="left_content">
+                <h2>Login</h2>
+                <p>Get access to your Orders, Wishlist and Recommendations</p>
+                <img src="./Image/login.png" alt="">
+            </div>
+
+
+        </div>
+        <div class="right">
+            <div class="innerright">
+                <input type="text" placeholder=" Enter Email/ Mobile number">
+                <span>By continuing, you agree to Flipkart's <a href="#">Terms of Use</a> and <a href="#">Privacy
+                        Policy.</a> </span> <br>
+                <div class="continue"><a href="#">Request OTP</a></div>
+                <div id="signupbtn"><a href="#e" onclick="exixting()">Existing User Login</a></div>
+
+            </div>
+            <div class="lower_right">
+                <a href="#" onclick="signup()"> New to Flipkart? create an account</a>
+            </div>
+
+        </div>
+        <i class="fa-solid fa-xmark"></i>
+
+    </div>
+
+
+    
+
+
+
+
+
+    <script>
+        function displayLoginPage() {
+
+            let loginbox = document.querySelector(".loginbox");
+
+            if (loginbox.style.display === "none") {
+                loginbox.style.display = "flex";  // Show the login box
+
+            } else {
+                loginbox.style.display = "none";  // Hide the login box
+            }
+        }
+        document.querySelector(".login").addEventListener("click", () => {
+            displayLoginPage();
+        })
+        document.querySelector(".fa-xmark").addEventListener("click", function () {
+            document.querySelector(".loginbox").style.display = "none";
+        });
+
+        document.querySelector('.more').addEventListener('mouseenter', function () {
+            document.querySelector('.morebox').style.display = 'block';
+        });
+
+        document.querySelector('.more').addEventListener('mouseleave', function () {
+            document.querySelector('.morebox').style.display = 'none';
+        });
+
+
+        function signup() {
+            let signup = document.querySelector(".lower_right a");
+            let continu = document.querySelector(".continue");
+            let exist = document.querySelector("#signupbtn")
+            let conten = document.querySelector(".left_content h2");
+            let para = document.querySelector(".left_content p");
+            signup.style.display = "none";
+            continu.innerHTML = "Continue";
+            continu.style.color = "white";
+
+            exist.style.display = "block";
+            conten.innerHTML = "Looks like you're new here!";
+            conten.style.fontSize = "1em"
+            para.innerHTML = "Get access to your Orders, Wishlist and Recommendations";
+            para.style.fontSize = "1em";
+
+
+            if (exist.style.display) {
+
+            }
+
+        }
+        document.querySelector(".lower_right a").addEventListener("click", () => {
+            signup();
+        })
+
+        function exixting() {
+            let signup = document.querySelector(".lower_right a");
+            let continu = document.querySelector(".continue");
+            let exist = document.querySelector("#signupbtn")
+            let conten = document.querySelector(".left_content h2");
+            let para = document.querySelector(".left_content p");
+
+            signup.style.display = "inline";
+            exist.style.display = "none"
+            continu.innerHTML = "Request OTP"
+            conten.innerHTML = "Login";
+            para.innerHTML = "Get access to your Orders, Wishlist and Recommendations"
+        }
+        document.querySelector("#signupbtn").addEventListener("click", () => {
+            exixting();
+        })
+
+    </script>
+</body>
+
+</html>

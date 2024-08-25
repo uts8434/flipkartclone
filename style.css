@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #2874F0;
+    --text-color1:white;
+}
+html,body{
+    background-color:var(--text-color1);
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+header{
+    background-color: var(--primary-color);
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+.header{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    gap: 5em;
+    padding: 8px 0px;
+}
+.icon>a>img{
+    width: 5em;
+}
+.lowericon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    
+}
+.lowericon span{
+color: white;
+font-size: .70em;
+font-style: italic;
+padding-top: 0;
+
+}
+.lowericon span+span{
+    color: gold;
+    
+    padding-left: 5px;
+    }
+.lowericon>img{
+    width: 1em;
+}
+
+
+.search{
+    background-color: white;
+    padding: 12px 12px;
+    width: 25%;
+}
+.innerserarch{
+    display: flex;
+}
+.innerserarch>input{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.login{
+    background-color: var(--text-color1);
+    padding: 8px 18px
+}
+.login>a,.seller>a{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.seller>a{
+  color: var(--text-color1);
+    
+}
+
+.cart{
+    color: var(--text-color1);
+    
+}
+.fa-cart-shopping{
+    padding-right: 5px;
+}
+
+
+
+
+
+/* login box start */
+.loginbox{
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    margin-top: 5%;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 5px;
+    position: relative;
+    z-index: 99;
+    
+}
+.fa-xmark{
+    display: block;
+    position: relative;
+    top: -5px;
+    left: 35px;
+    font-size: 2.2em;
+    color: gray;
+}
+.left{
+    background-color: var(--primary-color);
+    width: 45%;
+    height: 60vh;
+}
+.left_content{
+    color: white;
+   text-align: left;
+   margin: 50px 50px;
+}
+.left_content>h2{
+    margin-bottom: 10px;
+}
+.left_content>img{
+    margin-top: 80px;
+   width: 95%;
+}
+.right{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.innerright,.lower_right{
+   /* background-color: red; */
+    /* width: 90%; */
+    /* height: auto; */
+    /* margin: 0 auto; */
+    
+    margin: 30px;
+}
+.innerright>input{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    width: 100%;
+}
+.innerright>span>a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.innerright>div{
+    background-color: orangered;
+    
+    padding: 10px 25px;
+    border-radius: 3px;
+    text-align: center;
+    width: 100%;
+    margin-top: 1.5em;
+
+}
+.innerright>div>a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.innerright>div+div{
+    display: none;
+    background-color: white;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    
+}
+.innerright>div+div>a{
+    color: var(--primary-color);
+    
+}
+ 
+.lower_right{
+    width: 100%;
+    
+}
+.innerright>span{
+    font-size: 12px;
+    color: rgb(74, 74, 74);
+    font-weight:300;
+}
+.lower_right>a{
+    text-decoration: none;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+
+
+/* login box end */
+
+/* more box start */
+
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color1);
+    position: relative;
+    
+}
+
+.more>a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    
+    margin-right: 10px;
+    /* margin-bottom: 1em; */
+}
+
+.fa-chevron-up {
+    display: none;
+}
+
+.morebox {
+    background-color: white;
+    width: 350%;
+    top: 100%;
+    left: -110%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    display: none;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    border-bottom: 0.2px solid gray ;
+}
+
+.row>i {
+    color: var(--primary-color);
+}
+
+.row>a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Show the dropdown on hover */
+.more:hover .morebox {
+    display: block;
+}
+
+/* Toggle chevron icons on hover */
+.more:hover .fa-chevron-down {
+    display: none;
+}
+
+.more:hover .fa-chevron-up {
+    display: inline;
+}
+
+/* more box end  */
+
+.logindropbox {
+    width: 15%;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    display: none;
+    
+    background-color: white;
+    border-radius: 5px;
+    
+}
+.login:hover .logindropbox{display: block;}
+
+
+#lstrow{
+    border-bottom: none;
+}
